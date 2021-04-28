@@ -1,0 +1,28 @@
+﻿<Window x:Class="HelloGlobe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloGlobe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+
+    <StackPanel>
+
+        <TextBlock>Enter Name:</TextBlock>
+        <TextBox x:Name="uxName" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  TextChanged="uxName_TextChanged"></TextBox>
+        <TextBlock>Enter Password:</TextBlock>
+        <TextBox x:Name="uxPassword" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  TextChanged="uxPassword_PasswordChanged"></TextBox>
+        <Button x:Name="uxSubmit" Click="uxSubmit_Click"  IsEnabled="False">Submit
+        </Button>
+        <Button>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/ic_thumb_up_black_24dp_2x.png"  Margin="0,0,20,0"/>
+                <TextBlock Text="Thumbs Up" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button Height="100" Width="100">
+            <CheckBox>check</CheckBox>
+        </Button>
+    </StackPanel>
+</Window>
